@@ -29,6 +29,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  width: 1600px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -73,7 +74,8 @@ h1, h2, h3, p{
   .nav-list-address{
       display: flex;
       margin-left: auto;
-      align-items: baseline;   
+      align-items: center;
+ 
   }
   .nav-list .nav-list-address{
     display: flex;
@@ -84,6 +86,8 @@ h1, h2, h3, p{
     padding-top: 25px;
     padding-bottom: 25px;
   }
+
+
 
   .nav-list .nav-link-good:not(:last-child),
   .nav-list-address .nav-link-address:not(:last-child)
@@ -128,13 +132,8 @@ h1, h2, h3, p{
   color: var(--text-description-color);
   text-decoration: none;
 }
-.nav-link-address::before{
-  content: "";
-  display: inline-block;
-  width: auto;
-  height: auto;
-  background-image: url(/image/symbol-defs.svg#mail.svg);
-}
+
+
 .nav-link:hover,
 .nav-link:focus,
 .nav-address:hover,
@@ -145,6 +144,9 @@ h1, h2, h3, p{
 .baner-flex {
   display: flex;
   flex-direction: column;
+  max-width: 1600px;
+  height: auto;
+
   
 }
 .baner-content {
@@ -153,7 +155,10 @@ h1, h2, h3, p{
   padding-left: 237px;
   padding-right: 237px;
   text-align: center;
-  background: #2F303A;;
+  background-color: #2F303A;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
+  url("../image/baner-image.jpg");
+  
 }
 .baner {
   display: inline-block;
@@ -169,7 +174,10 @@ h1, h2, h3, p{
   margin: auto;
 }
 .baner-btn {
-    margin-top: 30px;
+  display: flex;
+  align-self: center;
+  padding: 10px 32px;
+  margin: 30px auto auto auto;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -177,12 +185,12 @@ h1, h2, h3, p{
   letter-spacing: 0.06em;
   color: var(--fon-word-color);
   text-decoration: none;
-}
-.baner-btn {
   background: var(--hover-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  border-radius: 4px;
+  border: 0px;
 }
+
+
 .baner-aside{
     padding-top: 94px;
 }
@@ -375,6 +383,13 @@ h1, h2, h3, p{
 .portfolio-item{
   flex-wrap: wrap;
 }
+.portfolio-item-in{ 
+  display: flex;
+  align-items: baseline;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  /* background-color: teal; */
+   }
 .portfolio-item-in{
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
@@ -409,6 +424,7 @@ h1, h2, h3, p{
   color: var(--fon-word-color);
 }
 .portfolio-text {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -424,16 +440,14 @@ h1, h2, h3, p{
   letter-spacing: 0.03em;
   color: var(--text-description-color);
 }
-.portfolio-notebook:hover::after {
+/* .portfolio-notebook:hover::after {
   content: attr(data-title);
-}
+} */
+
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  display:none;
+  stroke-width: 0px;
+    fill:var(red, green);
 }
 
 /* ==========================================
@@ -444,47 +458,54 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icon-antenna {
+  width: 0.9375em;
+}
+
+.icon-clock {
+  width: 0.96875em;
+}
+
+.icon-facebook {
+  width: 0.5625em;
+}
+
+.icon-laptop {
+  width: 1.28125em;
+}
+
 .icon-mail {
-  width: 1.3330078125em;
+  width: 1.34375em;
 }
 
-.icon-facebook-small {
-  width: 0.5498046875em;
+.icon-partner-01 {
+  width: 0.78125em;
 }
 
-.icon-partner-1 {
-  width: 0.900390625em;
+.icon-partner-02 {
+  width: 0.96875em;
 }
 
-.icon-partner-2 {
-  width: 0.76953125em;
+.icon-partner-03 {
+  width: 1.875em;
 }
 
-.icon-partner-3 {
-  width: 0.953125em;
+.icon-partner-04 {
+  width: 1.25em;
 }
 
-.icon-partner-4 {
-  width: 1.8603515625em;
-}
-
-.icon-partner-5 {
-  width: 1.2548828125em;
-}
-
-.icon-partner-6 {
-  width: 1.9345703125em;
+.icon-partner-05 {
+  width: 1.9375em;
 }
 
 .icon-smartphone {
+  display: flex;
   width: 16px;
-  height: 20px; 
+  height: 22px;
+ 
 }
 
-.icon-twitter-footer {
-  width: 1.111328125em;
-}
 
-.icon-Vector-small {
-  width: 1.111328125em;
+.icon-twitter {
+  width: 1.125em;
 }

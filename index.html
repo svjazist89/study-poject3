@@ -14,8 +14,8 @@
 <body>
   <main>
 
-    <header class="container">
-
+    <header>
+      <div class="container">
       <nav class="nav">
         <a href="./index.html" class="logo"><span class="web">Web</span>Studio</a>
         <ul class="list nav-list">
@@ -25,19 +25,26 @@
         </ul>
         <ul class="list nav-list-address">
           <li class="nav-link-address"><a href="mailto:info@devstudio.com" class="nav-address"><span>info@devstudio.com</span></a></li>
-          <li class="nav-link-address"><a href="tel:+380961111111" class="nav-address"><svg class="icon-smartphone"><use  href="./image/symbol-defs.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a></li>
+          <li class="nav-link-address" >
+            <a href="tel:+380961111111" class="nav-address"> 
+           <svg class="icon icon-smartphone">
+            <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+            </svg>
+            +38 096 111 11 11
+            </a>
+        </li>
         </ul>
       </nav>
-
+    </div>
     </header>
 
-    <div class="container">
+    
       <section class="baner-flex">
         <div class="baner-content">
           <h1 class="baner">Эффективные решения для вашего бизнеса</h1>
           <button class="baner-btn">Заказать услугу</button>
         </div>
-        <aside class="baner-aside">
+        <aside class="baner-aside container">
           <ul class="list menu-list">
             <li class="baner-list">
               <img src="./image/icons/antenna.svg" alt="Внимание" class="baner-menu-img" />
@@ -74,7 +81,7 @@
           </ul>
         </aside>
       </section>
-    </div>
+
 
     <section class="container whatwedo-container">
       <h2 class="whatwedo">Чем мы занимаемся</h2>
@@ -169,7 +176,10 @@
                 <a href="#" aria-label="facebook"><img src="./image/icons/facebook-small.svg" alt="facebook" /></a>
               </li>
               <li>
-                <a href="#" aria-label="linkedin"><img src="./image/icons/linkedin-small.svg" alt="linkedin" /></a>
+                <a href="#" aria-label="linkedin">           <svg class="icon icon-smartphone">
+                  <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+                    
+                  </svg></a>
               </li>
             </ul>
           </li>
@@ -190,9 +200,13 @@
       </section>
 
   </main>
+  <svg class="icon icon-smartphone">
+    <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+      
+    </svg>
 
-  <footer class="footer container">
-
+  <footer class="footer ">
+    <div class="container">
     <div >
       <p><a href="./index.html" class="logo"><span class="web">Web</span><span class="studio">Studio</span></a></p>
       <ul class="list menu-list footer-list">
@@ -226,6 +240,7 @@
     </div> -->
 
   </footer>
+  </div>
 </body>
 
 </html>
