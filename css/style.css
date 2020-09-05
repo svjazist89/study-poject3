@@ -9,6 +9,9 @@ font-family: 'Roboto', sans-serif; */
   --text-description-color: #757575;
   --icons-color: #AFB1B8;
   --bg-text-whatwedo-color: rgba(47, 48, 58, 0.8);
+  --btn-fon-color: #F5F4FA;
+  --portfolio-img-color: rgba(33, 150, 243, 0.9);
+  --fon-modal-window: rgba(0, 0, 0, 0.2);
 }
 .visually-hidden {
   position: absolute !important;
@@ -232,8 +235,204 @@ h1, h2, h3, p{
   border: 0px;
 
  }
+ .backdrop{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--fon-modal-window);
+  opacity: 1;
+  scale: 1;
+  transition: opacity 2s ease-out;
+  transform: scale(1);
+}
+.backdrop.is-hidden{
+  visibility: hidden;
+  pointer-events: 0;
+  opacity: 0;
+  scale: 0;
 
+}
+.modal{
+  width: 100%;
+  max-width: 528px;
+  /* height: 100%;
+  max-height: 581px; */
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: var(--fon-word-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  
+}
+.button-close{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: var(--fon-word-color);
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+.icon-button-close{
+  display:inline-flex;
+  width: 11px;
+  height: 11px;
+
+  fill:var(--most-word-color);
+  
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-close:focus,
+.button-close:hover{
+  outline: 0px;
+  border: 1px solid var(--hover-color);
+}
+.button-close:focus  .icon-button-close,
+.button-close:hover  .icon-button-close{
+  fill:var(--hover-color);
+}
+.baner-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+.form-title{
+  display: flex;
+  font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+width: 100%;
+margin-bottom: 12px;
+}
+.form-item{
+  
+  margin-bottom: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-description-color);
+}
+.form-item-comment{
+  resize: none;
+  width:100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.form-field{
+  position: relative;
+  width:100%;
+  margin-bottom: 10px;
+}
+.form-input{
+  height: 40px;
+  width:100%;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-modal-form{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  fill: var(--most-word-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover,
+.form-input:focus,
+.form-item-comment:hover,
+.form-item-comment:focus{
+  outline: 0px;
+  border: 1px solid var(--hover-color);
+  }
+.form-input:hover + .icon-modal-form,
+.form-input:focus + .icon-modal-form{
+  fill: var(--hover-color);
+}
+.modal-check-in{
+  display: inline-block;
+  margin-bottom: 30px;
+
+}
+.modal-checkbox{
+  display:inline-block;
+  position: absolute;
+  -webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
+}
+
+.icon-check{
+  display: inline-block;
+  vertical-align: middle;
+  /* position: absolute;
+  top: 0;
+  left:0; */
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--most-word-color);
+  margin-right: 7px;
+  background: var(--fon-word-color);
+  background-repeat: no-repeat;
+ }
+ .modal-checkbox:checked + .icon-check{
+  background: url("../image/modal-check.svg");
+  object-fit: fill;
+  background-repeat: no-repeat;
+  border: 0px;
+}
+.modal-check-text{
+  font-family: "Roboto" ,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-description-color);
+}
+.modal-button{
+  display: flex;
+  align-self: center;
+  padding: 10px 55px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--fon-word-color);
+  text-decoration: none;
+  background: var(--hover-color);
+  border-radius: 4px;
+  border: 0px;
+}
+.modal-button:focus,
+.modal-button:hover{
+  outline: 0px;
+}
 .baner-aside{
     padding-top: 94px;
 }
@@ -526,7 +725,7 @@ border-radius: 0px 0px 4px 4px;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 2550ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-item:not(:last-child){
   margin-right: 10px;
@@ -540,6 +739,9 @@ border-radius: 0px 0px 4px 4px;
 .footer-social-link:focus{
   background-color: var(--hover-color);
 }
+.footer-subskribe{
+  margin-left: 93px;
+}
 /* portfolio */
 .portfolio-main{
   display: block;
@@ -552,6 +754,7 @@ border-radius: 0px 0px 4px 4px;
   margin-bottom: 50px;
   justify-content: center;
 }
+
 .portfolio-btn-item:not(:last-child){
   margin-right: 8px;
 }
@@ -583,8 +786,11 @@ box-sizing: border-box;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-btn {
-  background: var(--fon-word-color);
+  background: var(--btn-fon-color);
+  padding: 6px 22px;
+  border: 0px;
   border-radius: 4px;
+  outline: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -592,11 +798,12 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--most-word-color);
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
+  border: 0px;
   background: var(--hover-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
@@ -604,8 +811,36 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   color: var(--fon-word-color);
 }
 .portfolio-text-item{
-  display: block;
+  /* display: block; */
   padding: 20px 24px;
+}
+.portfolio-img{
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-img-text{
+  /* display: inline-block; */
+  position: absolute;
+
+  background-color: var(--portfolio-img-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--fon-word-color);
+  height: 294px;
+  width: 370px;
+  padding: 63px 24px;
+  opacity: 0;
+  transform: translateY(0);
+    transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1),
+  opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1) ;
+
+}
+.portfolio-item-in:focus .portfolio-img-text,
+.portfolio-item-in:hover .portfolio-img-text{
+  opacity: 1;
+  transform: translateY(-294px);
 }
 .portfolio-text {
   font-family: "Roboto", sans-serif;
@@ -641,5 +876,46 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-
-
+.send-form{
+  display: inline-flex;
+  margin-top:20px;
+  /* outline: 2px solid tomato; */
+}
+.input-send{
+  width:357px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-right: 10px;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.send-button{
+  display: flex;
+  background-color: var(--hover-color);
+  outline: 0px;
+  border: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 28px;
+  align-items: center;
+  
+}
+.send-button-text{
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1,875;
+  letter-spacing: 0.06em;
+  color: var(--fon-word-color);
+}
+.icon-send{
+  margin-left: 10px;
+  height:24px;
+  width: 24px;
+  fill: var(--fon-word-color);
+}
