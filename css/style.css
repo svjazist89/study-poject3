@@ -151,7 +151,7 @@ h1, h2, h3, p{
 .nav-link-good {
   position: relative;
 }
-.nav-link-good .nav-link-border::after{
+.nav-link-border::after{
   content: "";
   display: block;
   width: 100%;
